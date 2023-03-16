@@ -1,0 +1,13 @@
+/*#First SQL on Khan Academy, intro to it all
+*/
+
+
+
+
+
+CREATE TABLE books (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER);
+
+INSERT INTO books VALUES (1, "Skyfire Avenue", 8);
+INSERT INTO books VALUES (2, "Gourmet Gaming", 8.5);
+INSERT INTO books VALUES (3, "Battle Through The Heavens", 7);
+SELECT * FROM books;
