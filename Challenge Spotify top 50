@@ -43,3 +43,18 @@ SELECT track_name, artist_name, popularity
 FROM BIT_DB.spotifydata
 ORDER BY popularity desc
 LIMIT 10
+
+#CTE practice using top 50 data
+
+
+WITH popularity_average_CTE AS (
+SELECT Spot.artist_name,
+AVG(Spot.popularity) AS average_popularity
+FROM SpotifyData Spot
+GROUP BY Spot.artist_name)
+
+SELECT artist_name, 
+    average_popularity,
+    'Top Star' AS tag
+FROM popularity_average_CTE
+WHERE average_popularity>=90;
